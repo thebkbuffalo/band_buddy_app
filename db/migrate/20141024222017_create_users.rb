@@ -6,6 +6,8 @@ class CreateUsers < ActiveRecord::Migration
       t.boolean :is_band
       t.boolean :is_musician
       t.integer :years_playing
+      t.string :tour_history
+      t.string :location
 
       t.timestamps
     end
