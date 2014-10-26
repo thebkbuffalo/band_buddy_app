@@ -1,5 +1,5 @@
 class Answer < ActiveRecord::Base
   belongs_to :response
-  has_many :questions
+  belongs_to :question
   validates :question_id, :answer, presences: true
 end

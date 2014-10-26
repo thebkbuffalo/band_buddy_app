@@ -11,6 +11,33 @@
     </div>
   <% end %>
 
+  <div id="field_users_form">
+    <p>
+      <%= f.label :name  %>:
+      <%= f.text_field :name, placeholder: 'Name (required)' %><br/><br/>
+      <%= f.label :email %>:
+      <%= f.text_field :email, placeholder: 'Email (required)' %><br/><br/>
+      <%= f.label :password %>:
+      <%= f.password_field :password, placeholder: 'Password (required)' %><br/><br/>
+      <%= f.label :password_confirmation, 'Confirmation' %>:
+      <%= f.password_field :password_confirmation, placeholder: 'Confirmation (required)' %><br/><br/>
+      <%= f.label :band %>? :
+      <%= f.check_box :is_band %><br/><br/>
+      <%= f.label :musician %>? :
+      <%= f.check_box :is_musician %><br/><br/>
+      <%= f.label :years_playing %>? :
+      <%= f.text_field :years_playing %><br/><br/>
+      <%= f.label :recent_tour_history %>:
+      <%= f.text_field :tour_history %><br/><br/>
+      <%= f.label :where_are_you %>? :
+      <%= f.text_field :location %><br/><br/>
+      <%= f.label :picture %>:
+      <%= f.text_field :picture %><br/><br/>
+      <%= f.label :video %>:
+      <%= f.text_field :video %><br/><br/>
+    </p>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
