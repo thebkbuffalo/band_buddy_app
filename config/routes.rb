@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   get "/login" => "sessions#new"
   resource  :session, only: [:create, :destroy]
 
-  resources :responses
+  resources :responses, only: [:index, :show]
 
-  resources :answers
+  resources :answers, only: [:index, :show]
 
-  resources :questions
+  resources :questions, only: [:index, :show]
 
   resources :users
 

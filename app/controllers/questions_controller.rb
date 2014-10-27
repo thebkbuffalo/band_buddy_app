@@ -1,17 +1,18 @@
 class QuestionsController < ApplicationController
-  before_action :set_question, only: [:show, :edit, :update, :destroy]
+  # before_action :set_question, only: [:show, :edit, :update, :destroy]
 
   # GET /questions
   # GET /questions.json
   def index
-    @questions = Question.all
+    @questions = Question
   end
 
   # GET /questions/1
   # GET /questions/1.json
   def show
-    @questions = Question.all
-    @answers = Answer.al
+    @user = User.find(params[:id])
+    @questions = Question
+    @answers = Answer.all
   end
 
   # GET /questions/new

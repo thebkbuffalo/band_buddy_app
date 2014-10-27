@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+  before_action :load_user, except: [:index, :new, :create]
 
   # GET /users
   # GET /users.json
@@ -80,5 +80,10 @@ class UsersController < ApplicationController
       :password,
       :password_confirmation
     )
+  end
+
+    def load_user
+    @user = User.find_by(id: params[:id])
+    redirect_to root_path if !@user
   end
 end
