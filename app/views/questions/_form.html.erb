@@ -4,6 +4,7 @@
       <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
 
       <ul>
+        <!-- TODO: re-factor to ender new questions with a placeholder: enter a band > or < placeholder: enter a similar band -->
       <% @question.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
