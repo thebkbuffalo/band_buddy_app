@@ -11,32 +11,44 @@
     </div>
   <% end %>
 
-  <div id="field_users_form">
-    <p>
-      <%= f.label :name  %>:
-      <%= f.text_field :name, placeholder: 'Name (required)' %><br/><br/>
-      <%= f.label :email %>:
-      <%= f.text_field :email, placeholder: 'Email (required)' %><br/><br/>
-      <%= f.label :password %>:
-      <%= f.password_field :password, placeholder: 'Password (required)' %><br/><br/>
-      <%= f.label :password_confirmation, 'Confirmation' %>:
-      <%= f.password_field :password_confirmation, placeholder: 'Confirmation (required)' %><br/><br/>
-      <%= f.label :band %>? :
-      <%= f.check_box :is_band %><br/><br/>
-      <%= f.label :musician %>? :
-      <%= f.check_box :is_musician %><br/><br/>
-      <%= f.label :years_playing %>? :
-      <%= f.text_field :years_playing %><br/><br/>
-      <%= f.label :recent_tour_history %>:
-      <%= f.text_field :tour_history %><br/><br/>
-      <%= f.label :where_are_you %>? :
-      <%= f.text_field :location %><br/><br/>
-      <%= f.label :picture %>:
-      <%= f.text_field :picture %><br/><br/>
-      <%= f.label :video %>:
-      <%= f.text_field :video %><br/><br/>
-    </p>
+  <div id="new_musician_form">
+    <%= f.label :name %>:
+    <%= f.text_field :name, placeholder: "Name (required)" %><br/><br/>
+    <%= f.label :email %>:
+    <%= f.text_field :email, placeholder: "Email (required)" %><br/><br/>
+    <%= f.label :password %>:
+    <%= f.password_field :password, placeholder: "Password (required)" %><br/><br/>
+    <%= f.label :password_confirmation %>:
+    <%= f.password_field :password_confirmation, placeholder: "Password Confirmation (required)" %><br/><br/>
+    <%= f.label :band %>?:
+    <%= f.check_box :is_band %>Click here if you're in a band!<br/><br/>
+    <%= f.label :musician %>?:
+    <%= f.check_box :is_musician %>Click here if you're looking to JOIN a band!<br/><br/>
+    <%= f.label :location %>:
+    <%= f.text_field :location, placeholder: "Location (required)" %><br/><br/>
+    <%= f.label :instrument %>(s):
+    <%= f.text_field :instrument, placeholder: "Instrument (required)" %><br/><br/>
+    <%= f.label :years_playing %>:
+    <%= f.number_field :years_playing, placeholder: "Years Playing? (required)" %><br/><br/>
+    <%= f.label :style %>:
+    <%= f.text_field :style %><br/><br/>
+    <%= f.label :tour_history %>:
+    <%= f.text_field :tour_history, placeholder: "Tour History" %><br/><br/>
+    <%= f.label :about_you %>:
+    <%= f.text_field :about_you, placeholder: "Something About You" %><br/><br/>
+    <%= f.label :smoker %>? :
+    <%= f.check_box :is_smoker %>Click if you are!<br/><br/>
+    <%= f.label :favorite_venue %>:
+    <%= f.text_field :favorite_venue, placeholder: "Favorite Venue" %><br/><br/>
+    <%= f.label :favorite_band %>:
+    <%= f.text_field :favorite_band, placeholder: "Favorite Band" %><br/><br/>
+    <%= f.label :picture %>:
+    <%= f.url_field :picture, placeholder: "Picture" %><br/><br/>
+    <%= f.label :video %>:
+    <%= f.url_field :video, placeholder: "Video" %><br/><br/>
   </div>
+
+
 
   <div class="actions">
     <%= f.submit %>
