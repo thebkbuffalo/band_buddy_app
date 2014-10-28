@@ -1,30 +1,22 @@
 <h1>Listing users</h1>
+<% @users.each do |user| %><br/>
+  <img src="<%= user.picture %>" width=173px height=173px/><br/>
+  <%= user.name %>
+    <% if user.is_band == true %>
+      We're a band!
+    <% else %>
+      I'm a musician!
+<% end %><br/>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= link_to 'Show', user %>
+<%= link_to 'Edit', edit_user_path(user) %>
+<%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <% if user.is_band == true %>
-          <td>We're a band!</td>
-          <% else %>
-          <td>I'm a musician!</td>
-        <% end %>
-        
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <br/><% end %>
 
-<br>
+
+
+
+<br/>
 
 <%= link_to 'New User', new_user_path %>

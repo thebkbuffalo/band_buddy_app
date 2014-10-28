@@ -4,6 +4,8 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.json
   def index
+    @user = User.find(params[:user_id])
+    @answers = Array.new(10) { @user.answers.build }
     @questions = Question.all
   end
 

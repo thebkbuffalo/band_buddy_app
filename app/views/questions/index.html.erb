@@ -1,9 +1,8 @@
-<%= form_for(@question) do |f| %>
-  <% @questions.each do |question| %>
-    <%= question.question_text %><br/>
-    <%= f.label question.answer_1 %>
-    <%= f.check_box question.answer_1 %>
-    <%= f.label question.answer_2 %>
-    <%= f.check_box question.answer_2 %><br/><br/>
-  <% end %>
-<% end %>
+
+    <%= form_tag user_answers_path do |f| %>
+      <% @questions.each do |question| %>
+        <%= label_tag question.question_text %><br/>
+        <%= select_tag "answers[][#{question.id}]", options_for_select([question.answer_1, question.answer_2]) %><br/><br/>
+      <% end %>
+      <%= submit_tag %>
+    <% end %>

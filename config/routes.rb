@@ -4,15 +4,13 @@ Rails.application.routes.draw do
   get "/login" => "sessions#new"
   resource  :session, only: [:create, :destroy]
 
-  resources :responses, only: [:index, :show]
-
   resources :answers, only: [:index, :show, :create, :destroy, :edit, :update, :new]
 
   resources :questions, only: [:index, :show, :create, :destroy, :edit, :update, :new]
 
   resources :users do
     resources :questions, only: [:index, :show]
-    resources :answers, only: [:index, :show]
+    resources :answers, only: [:index, :show, :create]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

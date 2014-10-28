@@ -1,3 +1,4 @@
+<img src="<%= @user.picture %>" width=200px height=200px/><br/>
 Name: <%= @user.name %><br/>
 Email: <%= @user.email %>
 <% if @user.is_band == true %>
@@ -7,7 +8,11 @@ Email: <%= @user.email %>
 <% end %>
 Years Playing: <%= @user.years_playing %> Years <br/>
 Touring History: <%= @user.tour_history %><br/>
-I'm at: <%= @user.location %><br/>
+<% if @user.is_band == true %>
+  We're at: <%= @user.location %>
+<% else %>
+  I'm at: <%= @user.lcation %>
+<% end %><br/>
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
