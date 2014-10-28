@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email, null: false
       t.boolean :is_band
       t.boolean :is_musician
-      t.string :instrument, null: false
+      t.string :instrument
       t.string :style
       t.integer :years_playing, null: false
       t.string :tour_history, null: false

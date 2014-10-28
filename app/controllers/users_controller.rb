@@ -66,15 +66,21 @@ class UsersController < ApplicationController
 
 
     # Never trust parameters from the scary internet, only allow the white list through.
-      def user_params
+  def user_params
     params.require(:user).permit(
       :name,
       :email,
       :is_band,
       :is_musician,
+      :instrument,
+      :style,
       :years_playing,
       :tour_history,
       :location,
+      :about_you,
+      :is_smoker,
+      :favorite_venue,
+      :favorite_band,
       :picture,
       :video,
       :password,
@@ -82,8 +88,8 @@ class UsersController < ApplicationController
     )
   end
 
-    def load_user
+  def load_user
     @user = User.find_by(id: params[:id])
     redirect_to root_path if !@user
   end
-end
+end #ends class

@@ -4,7 +4,7 @@
       <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
 
       <ul>
-        <!-- TODO: re-factor to ender new questions with a placeholder: enter a band > or < placeholder: enter a similar band -->
+
       <% @question.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
@@ -12,6 +12,15 @@
     </div>
   <% end %>
 
+  <div id="questions_form">
+    <%= f.label :question_text %>:
+    <%= f.text_field :question_text %>
+    <%= f.label :answer_1 %>:
+    <%= f.text_field :answer_1 %>
+    <%= f.label :answer_2 %>:
+    <%= f.text_field :answer_2 %>
+  </div>
+<br/>
   <div class="actions">
     <%= f.submit %>
   </div>

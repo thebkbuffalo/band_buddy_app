@@ -1,16 +1,9 @@
-<h1>Listing questions</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <%= @questions %>
-  
-  </tbody>
-</table>
-
-<br>
+<%= form_for(@question) do |f| %>
+  <% @questions.each do |question| %>
+    <%= question.question_text %><br/>
+    <%= f.label question.answer_1 %>
+    <%= f.check_box question.answer_1 %>
+    <%= f.label question.answer_2 %>
+    <%= f.check_box question.answer_2 %><br/><br/>
+  <% end %>
+<% end %>

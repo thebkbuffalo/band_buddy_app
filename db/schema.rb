@@ -11,54 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141024222126) do
+ActiveRecord::Schema.define(version: 20141024222118) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "answers", force: true do |t|
     t.integer  "question_id"
-    t.string   "beatles",           null: false
-    t.string   "stones",            null: false
-    t.string   "pfunk",             null: false
-    t.string   "james_brown",       null: false
-    t.string   "pac",               null: false
-    t.string   "biggie",            null: false
-    t.string   "ramones",           null: false
-    t.string   "sam_cooke",         null: false
-    t.string   "otis_redding",      null: false
-    t.string   "the_white_stripes", null: false
-    t.string   "the_black_keys",    null: false
-    t.string   "the_smiths",        null: false
-    t.string   "the_cure",          null: false
-    t.string   "led_zeppelin",      null: false
-    t.string   "the_who",           null: false
-    t.string   "bruce_springsteen", null: false
-    t.string   "billy_joel",        null: false
-    t.string   "john_coltrane",     null: false
-    t.string   "miles_davis",       null: false
+    t.integer  "user_id"
+    t.string   "choice",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "questions", force: true do |t|
-    t.string   "bealtes_or_stones",                   null: false
-    t.string   "pfunk_or_james_brown",                null: false
-    t.string   "pac_or_biggie",                       null: false
-    t.string   "ramons_or_sex_pistols",               null: false
-    t.string   "sam_cooke_or_otis_redding",           null: false
-    t.string   "the_white_stripes_or_the_black_keys", null: false
-    t.string   "the_smiths_or_the_cure",              null: false
-    t.string   "led_zeppelin_or_the_who",             null: false
-    t.string   "bruce_springsteen_or_billy_joel",     null: false
-    t.string   "john_coltrane_or_miles_davis",        null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "responses", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "answer_id"
+    t.string   "question_text", null: false
+    t.string   "answer_1",      null: false
+    t.string   "answer_2",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -68,9 +37,15 @@ ActiveRecord::Schema.define(version: 20141024222126) do
     t.string   "email",           null: false
     t.boolean  "is_band"
     t.boolean  "is_musician"
+    t.string   "instrument"
+    t.string   "style"
     t.integer  "years_playing",   null: false
     t.string   "tour_history",    null: false
     t.string   "location",        null: false
+    t.string   "about_you"
+    t.boolean  "is_smoker"
+    t.string   "favorite_venue"
+    t.string   "favorite_band"
     t.string   "picture"
     t.string   "video"
     t.string   "password_digest"
