@@ -4,19 +4,18 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :password, presence: true
   validates :email, presence: true, uniqueness: true
+  include SessionHelper
 
 
-
-    def using_now_array
-      using_now = User.find(current_user.id)
+    def using_now_array(current_user_id)
+      using_now = User.find(current_user_id)
       using_now.answers.map {|user| user.answers}
     end
 
 
-    def get_scores(session)
-
+    def get_scores(current_user_id)
       second_user_answers = answers.map {|user| user.answers}
-      in_common_array = using_now_array & second_user_answers
+      in_common_array = using_now_array(current_user_id) & second_user_answers
       length = in_common_array.length
       percent = length.to_f / 11 * 100
       percent.to_i
