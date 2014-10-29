@@ -1,17 +1,23 @@
 class UsersController < ApplicationController
-  before_action :load_user, except: [:index, :new, :create]
+  before_action :load_user, except: [:new, :create]
+  before_action :load_session
+
 
   # GET /users
   # GET /users.json
   def index
+    
     @users = User.all
+    # @user = User.find(params[:id])
+
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+
     @user = User.find(params[:id])
-    @score = get_scores(current_user, @user)
+
   end
 
   # GET /users/new
@@ -91,6 +97,11 @@ class UsersController < ApplicationController
 
   def load_user
     @user = User.find_by(id: params[:id])
-    redirect_to root_path if !@user
   end
+
+  def load_session
+    @session = session[:user_id]
+  end
+
+
 end #ends class
