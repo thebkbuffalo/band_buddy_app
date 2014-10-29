@@ -144,3 +144,9 @@ Question.create(
   answer_1: "Led Zeppelin",
   answer_2: "The Who"
 )
+
+Question.create(
+  question_text: "Pear Jam or Nirvana?",
+  answer_1: "Pearl Jam",
+  answer_2: "Nirvana"
+)
