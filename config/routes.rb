@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root "welcome#index"
   get "/login" => "sessions#new"
-  resource  :session, only: [:create, :destroy]
+  resource  :sessions, only: [:create, :destroy]
 
   resources :answers, only: [:index, :show, :create, :destroy, :edit, :update, :new]
 
