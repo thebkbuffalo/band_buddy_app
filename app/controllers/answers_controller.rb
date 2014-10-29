@@ -26,8 +26,8 @@ class AnswersController < ApplicationController
   def create
 
     Answer.group_save(current_user, answer_params)
-    # @answer = Answer.new(answer_params)
-  
+    #@answer = Answer.new(answer_params)
+
     # respond_to do |format|
     #   if @answer.save
     #     format.html { redirect_to @answer, notice: 'Answer was successfully created.' }
