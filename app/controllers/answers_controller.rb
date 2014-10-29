@@ -24,18 +24,20 @@ class AnswersController < ApplicationController
   # POST /answers
   # POST /answers.json
   def create
-    @answer = Answer.new(answer_params)
-    binding.pry
 
-    respond_to do |format|
-      if @answer.save
-        format.html { redirect_to @answer, notice: 'Answer was successfully created.' }
-        format.json { render :show, status: :created, location: @answer }
-      else
-        format.html { render :new }
-        format.json { render json: @answer.errors, status: :unprocessable_entity }
-      end
-    end
+    Answer.group_save(current_user, answer_params)
+    # @answer = Answer.new(answer_params)
+  
+    # respond_to do |format|
+    #   if @answer.save
+    #     format.html { redirect_to @answer, notice: 'Answer was successfully created.' }
+    #     format.json { render :show, status: :created, location: @answer }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @answer.errors, status: :unprocessable_entity }
+    #   end
+    # end
+    redirect_to user_path(current_user)
   end
 
   # PATCH/PUT /answers/1
@@ -70,12 +72,6 @@ class AnswersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def answer_params
-      params.require(:answer).permit(
-        :answers,
-        :answers,
-        :answers,
-        :answers,
-        :answers
-      )
+      params.permit(answers: ['1','2','3','4','5','6','7','8','9','10'], :user_id => current_user.id).require('answers')[0]
     end
 end

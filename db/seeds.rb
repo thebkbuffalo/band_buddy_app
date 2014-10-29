@@ -113,5 +113,34 @@ Question.create(
   question_text: "Robert Johnson or Son House?",
   answer_1: "Robert Johnson",
   answer_2: "Son House"
+)
 
+Question.create(
+  question_text: "The Clash or The Ramones?",
+  answer_1: "The Clash",
+  answer_2: "The Ramones"
+)
+
+Question.create(
+  question_text: "The Black Keys or The White Stripes?",
+  answer_1: "The Black Keys",
+  answer_2: "The White Stripes"
+)
+
+Question.create(
+  question_text: "Sam Cooke or Otis Redding?",
+  answer_1: "Sam Cooke",
+  answer_2: "Otis Redding"
+)
+
+Question.create(
+  question_text: "2Pac or Biggie?",
+  answer_1: "2Pac",
+  answer_2: "Biggie"
+)
+
+Question.create(
+  question_text: "Led Zeppelin or The Who?",
+  answer_1: "Led Zeppelin",
+  answer_2: "The Who"
 )
