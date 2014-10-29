@@ -6,9 +6,9 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    
+
     @users = User.all
-    # @user = User.find(params[:id])
+
 
   end
 
