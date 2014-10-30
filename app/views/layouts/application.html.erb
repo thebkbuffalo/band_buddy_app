@@ -9,7 +9,8 @@
 <body>
 <header>
   <% if current_user %>
-    <%= button_to "Logout", sessions_path, :method => :delete %>
+    <%= button_to "Logout", sessions_path, :method => :delete, class: :logout_button %>
+    <h1 id="welcome">Welcome <%= current_user.name %></h1>
   <% end %>
 </header>
 

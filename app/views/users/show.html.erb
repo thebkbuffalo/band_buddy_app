@@ -1,27 +1,35 @@
-<head>
-  Welcome <%= current_user.name %>
-</head><br/>
-<img src="<%= @user.picture %>" width=200px height=200px/><br/>
-Name: <%= @user.name %><br/>
-Email: <%= @user.email %>
-<% if @user.is_band == true %>
-  <p>We're a band!</p>
+
+<section id="user_show">
+  <img id="user_pictures" src="<%= @user.picture %>" width=400px height=300px/><br/><br/>
+  Name: <%= @user.name %><br/><br/>
+  Email: <%= @user.email %><br/><br/>
+  <% if @user.is_band == true %>
+    <p>We're a band!</p>
+    <% else %>
+    <p>I'm a musician!</p>
+  <% end %><br/>
+  Years Playing: <%= @user.years_playing %> Years <br/><br/>
+  Touring History: <%= @user.tour_history %><br/><br/>
+  <% if @user.is_band == true %>
+    We're at: <%= @user.location %>
   <% else %>
-  <p>I'm a musician!</p>
-<% end %>
-Years Playing: <%= @user.years_playing %> Years <br/>
-Touring History: <%= @user.tour_history %><br/>
-<% if @user.is_band == true %>
-  We're at: <%= @user.location %>
-<% else %>
-  I'm at: <%= @user.location %>
-<% end %><br/>
+    I'm at: <%= @user.location %>
+  <% end %><br/><br/>
+  <%= @user.about_you %><br/><br/>
+  <% if @user.is_smoker == true %>
+    <p>Smokes? Yes Please!</p>
+  <% else %>
+    <p>Smokes? No Thanks!</p>
+  <% end %><br/>
+  <%= @user.favorite_band %><br/><br/>
+  <%= @user.favorite_venue %><br/><br/>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Questions', user_questions_path(@user) %> |
-<% if current_user.is_band == true %>
-  <%= link_to 'Browse Musicians', users_path %>
-<% else %>
-  <%= link_to 'Browse Bands', users_path %>
-<% end %>
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+  <%= link_to 'Questions', user_questions_path(@user) %> |
+  <% if current_user.is_band == true %>
+    <%= link_to 'Browse Musicians', users_path %>
+  <% else %>
+    <%= link_to 'Browse Bands', users_path %>
+  <% end %>
+</section>
