@@ -14,14 +14,13 @@
  *= require_self
  */
 
-img.welcome_img {
-  z-index: -1; /* put it under everything*/
-  position: fixed; /* make it stay in the same place, regardless of scrolling */
-  top: 0;
+.welcome_img {
+  z-index: -1;
+  position: fixed;
   left: 0;
-  overflow: hidden; /* clip the image */
-  width: 100%; /* fill the full width of browser */
-  min-height: 950px; /* show at least this much of the image */
+  overflow: hidden;
+  width: 100%;
+  min-height: 950px;
 }
 
 #login {
