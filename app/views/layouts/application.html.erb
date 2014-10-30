@@ -10,7 +10,8 @@
 <header>
   <% if current_user %>
     <%= button_to "Logout", sessions_path, :method => :delete, class: :logout_button %>
-    <h1 id="welcome">Welcome <%= current_user.name %></h1>
+    <a href="/users/<%=current_user.id%>">
+    <h1 id="welcome">Welcome <%= current_user.name %></h1></a>
   <% end %>
 </header>
 
