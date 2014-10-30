@@ -14,7 +14,7 @@
  *= require_self
  */
 
-#log_in img {
+/*#log_in img {
   z-index: -1;
   position: fixed;
   top: 0;
@@ -22,7 +22,7 @@
   overflow: hidden;
   width: 100%;
   min-height: 950px;
-}
+}*/
 
 #login {
   background: #FCFCFC;
