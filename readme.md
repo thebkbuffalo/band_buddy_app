@@ -10,3 +10,6 @@ The use of my app is SUPER simple.  Just clone it down, bundle install, spin it 
 - Postgresql
 - Active Record
 - Some others
+
+
+Heroku Name - @thebkbuffalo
