@@ -1,7 +1,8 @@
 <h1>Listing users</h1>
 <% @users.each do |user| %><br/>
+
   <img src="<%= user.picture %>" width=173px height=173px/><br/>
-  <%= user.name %>
+  <%= user.name %><br/>
     <% if user.is_band == true %>
       We're a band!
     <% else %>
@@ -13,11 +14,11 @@
 <%= link_to 'Edit', edit_user_path(user) %>
 <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
 
-    <br/><% end %>
-
-
+  <br/><br/><% end %>
 
 
 <br/>
 
 <%= link_to 'New User', new_user_path %>
+
+<!-- user a were clause in active record were current_user.id != user_id to render only what you want  -->

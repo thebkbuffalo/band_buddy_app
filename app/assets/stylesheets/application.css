@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+
+.welcome_img {
+  z-index: -1; /* put it under everything*/
+  position: fixed; /* make it stay in the same place, regardless of scrolling */
+  top: 0;
+  left: 0;
+  overflow: hidden; /* clip the image */
+  width: 100%; /* fill the full width of browser */
+  min-height: 950px; /* show at least this much of the image */
+}
+
+#login, #questions_form {
+  background: #FCFCFC;
+  opacity: .8;
+  text-align: center;
+  margin: 20%;
+  border-radius: 5px;
+  border: 2px solid grey;
+  padding: 10px;
+}
+
+#questions_form {
+  background: lightgrey;
+  opacity: .8;
+  text-align: center;
+  margin: 10%;
+  border-radius: 5px;
+  border: 2px solid grey;
+  padding: 10px;
+}

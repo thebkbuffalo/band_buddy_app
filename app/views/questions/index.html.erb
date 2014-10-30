@@ -1,4 +1,4 @@
-
+  <section id="questions_form">
     <%= form_tag user_answers_path do |f| %>
       <% @questions.each do |question| %>
         <%= label_tag question.question_text %><br/>
@@ -6,3 +6,4 @@
       <% end %>
       <%= submit_tag %>
     <% end %>
+  </section>

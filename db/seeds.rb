@@ -24,7 +24,7 @@ User.create(
   is_smoker: true,
   favorite_venue: "The Spotted Cat",
   favorite_band: "Prince",
-  picture: "http://50632a5e2da3d401de2c-e98b4c2d5d863a4eed0a475484b91981.r49.cf1.rackcdn.com/6660_Anastasia-Konecky.jpg",
+  picture: "http://eccentricneworleans.com/images/Drum_Buddy_Dancers-sm.jpg",
   video: ""
 )
 
