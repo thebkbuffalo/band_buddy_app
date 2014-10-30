@@ -14,7 +14,7 @@
  *= require_self
  */
 
-img {
+#log_in img {
   z-index: -1;
   position: fixed;
   top: 0;
