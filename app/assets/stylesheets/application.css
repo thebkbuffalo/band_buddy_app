@@ -14,7 +14,7 @@
  *= require_self
  */
 
-.welcome_img {
+img {
   z-index: -1;
   position: fixed;
   top: 0;
