@@ -14,7 +14,7 @@
  *= require_self
  */
 
-.welcome_img {
+img.welcome_img {
   z-index: -1; /* put it under everything*/
   position: fixed; /* make it stay in the same place, regardless of scrolling */
   top: 0;
@@ -24,7 +24,7 @@
   min-height: 950px; /* show at least this much of the image */
 }
 
-#login, #questions_form {
+#login {
   background: #FCFCFC;
   opacity: .8;
   text-align: center;
