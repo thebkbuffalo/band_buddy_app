@@ -9,8 +9,7 @@ html {
   margin: 20%;
   border-radius: 5px;
   border: 2px solid grey;
-  padding: 7px;
-  font-size: 25px;
+  padding: 10px;
 }
 
 #questions_form {

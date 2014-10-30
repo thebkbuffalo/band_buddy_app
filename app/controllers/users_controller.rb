@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.where("id != #{current_user.id}")
+    
   end
 
   # GET /users/1

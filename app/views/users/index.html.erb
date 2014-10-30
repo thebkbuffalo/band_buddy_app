@@ -1,7 +1,6 @@
-<h1>Listing users</h1>
 <% @users.each do |user| %><br/>
-
-  <img src="<%= user.picture %>" width=173px height=173px/><br/>
+<div id="users_index">
+  <img src="<%= user.picture %>" width=212px height=173px/><br/>
   <%= user.name %><br/>
     <% if user.is_band == true %>
       We're a band!
@@ -10,15 +9,10 @@
 <% end %><br/>
 
 <%= user.get_scores(@session) %>% Matchiness<br/>
-<%= link_to 'Show', user %>
-<%= link_to 'Edit', edit_user_path(user) %>
-<%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
-
+<% if user.is_band == true %>
+  <%= link_to 'Check Us Out!', user %>
+<% else %>
+  <%= link_to 'Check Me Out!', user %>
+<% end %>
+</div>
   <br/><br/><% end %>
-
-
-<br/>
-
-<%= link_to 'New User', new_user_path %>
-
-<!-- user a were clause in active record were current_user.id != user_id to render only what you want  -->
