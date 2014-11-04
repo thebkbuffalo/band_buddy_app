@@ -9,7 +9,14 @@ The use of my app is SUPER simple.  Just clone it down, bundle install, spin it 
 - Rails
 - Postgresql
 - Active Record
-- Some others
+- HTML
+- CSS
+- More to come...
 
+Version: 0.0.1
 
-Heroku Name - @thebkbuffalo
+### Testing:
+
+- Testing to come...
+
+Heroku Name - @http://sleepy-bayou-5359.herokuapp.com
