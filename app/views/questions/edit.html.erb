@@ -1,6 +1,9 @@
-<h1>Editing question</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @question %> |
-<%= link_to 'Back', questions_path %>
+<section id="questions_form">
+  <%= form_tag user_answers_path do |f| %>
+    <% @questions.each do |question| %>
+      <%= label_tag question.question_text %><br/>
+      <%= select_tag "answers[][#{question.id}]", options_for_select([question.answer_1, question.answer_2]) %><br/><br/>
+    <% end %>
+    <%= submit_tag %>
+  <% end %>
+</section>

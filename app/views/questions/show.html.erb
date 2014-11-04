@@ -1,3 +1,9 @@
-Question: <%= @question.question_text %><br/>
-Answer One: <%= @question.answer_1 %><br/>
-Answer Two: <%= @question.answer_2 %>
+<section id="questions_form">
+  <%= form_tag user_answers_path do |f| %>
+    <% @questions.each do |question| %>
+      <%= label_tag question.question_text %><br/>
+      <%= select_tag "answers[][#{question.id}]", options_for_select([question.answer_1, question.answer_2]) %><br/><br/>
+    <% end %>
+    <%= submit_tag %>
+  <% end %>
+</section>

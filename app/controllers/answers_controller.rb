@@ -19,6 +19,7 @@ class AnswersController < ApplicationController
 
   # GET /answers/1/edit
   def edit
+    @answers = Answer.all
   end
 
   # POST /answers
@@ -43,15 +44,18 @@ class AnswersController < ApplicationController
   # PATCH/PUT /answers/1
   # PATCH/PUT /answers/1.json
   def update
-    respond_to do |format|
-      if @answer.update(answer_params)
-        format.html { redirect_to @answer, notice: 'Answer was successfully updated.' }
-        format.json { render :show, status: :ok, location: @answer }
-      else
-        format.html { render :edit }
-        format.json { render json: @answer.errors, status: :unprocessable_entity }
-      end
-    end
+
+    Answer.group_update(current_user, answer_params)
+    # respond_to do |format|
+    #   if @answer.update(answer_params)
+    #     format.html { redirect_to @answer, notice: 'Answer was successfully updated.' }
+    #     format.json { render :show, status: :ok, location: @answer }
+    #   else
+    #     format.html { render :edit }
+    #     format.json { render json: @answer.errors, status: :unprocessable_entity }
+    #   end
+    # end
+    redirect_to user_path(current_user)
   end
 
   # DELETE /answers/1

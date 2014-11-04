@@ -8,4 +8,11 @@ class Answer < ActiveRecord::Base
       Answer.create(user_id: user.id, question_id: k.to_i, answers: v)
     end
   end
+
+  def self.group_update(user, hash)
+    hash.each do |k,v|
+      Answer.update(user_id: user.id, question_id: k.to_i, answers: v)
+    end
+  end
+
 end

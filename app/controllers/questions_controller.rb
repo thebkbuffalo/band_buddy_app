@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :set_question, only: [:show, :edit, :update, :destroy]
+  #  before_action :set_question, only: [:show, :edit, :update, :destroy]
 
   # GET /questions
   # GET /questions.json
@@ -12,7 +12,9 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.json
   def show
-    @question = Question.find(params[:id])
+    @user = User.find(params[:user_id])
+    @answers = Array.new(10) { @user.answers.build }
+    @questions = Question.all
   end
 
   # GET /questions/new
@@ -22,6 +24,9 @@ class QuestionsController < ApplicationController
 
   # GET /questions/1/edit
   def edit
+    @user = User.find(params[:user_id])
+    @answers = Array.new(10) { @user.answers.build }
+    @questions = Question.all
   end
 
   # POST /questions
