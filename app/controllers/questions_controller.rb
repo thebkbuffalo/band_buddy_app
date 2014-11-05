@@ -24,9 +24,7 @@ class QuestionsController < ApplicationController
 
   # GET /questions/1/edit
   def edit
-    @user = User.find(params[:user_id])
-    @answers = Array.new(10) { @user.answers.build }
-    @questions = Question.all
+    @qustion = Question.find(params[:id])
   end
 
   # POST /questions

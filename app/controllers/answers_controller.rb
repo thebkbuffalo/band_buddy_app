@@ -19,13 +19,13 @@ class AnswersController < ApplicationController
 
   # GET /answers/1/edit
   def edit
-    @answers = Answer.all
+    @answer = Answer.new
   end
 
   # POST /answers
   # POST /answers.json
   def create
-binding.pry
+
     Answer.group_save(current_user, answer_params)
     #@answer = Answer.new(answer_params)
 
@@ -45,6 +45,7 @@ binding.pry
   # PATCH/PUT /answers/1.json
   def update
 binding.pry
+  
     Answer.group_update(current_user, answer_params)
     # respond_to do |format|
     #   if @answer.update(answer_params)
