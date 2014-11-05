@@ -25,7 +25,7 @@ class AnswersController < ApplicationController
   # POST /answers
   # POST /answers.json
   def create
-
+binding.pry
     Answer.group_save(current_user, answer_params)
     #@answer = Answer.new(answer_params)
 
@@ -44,7 +44,7 @@ class AnswersController < ApplicationController
   # PATCH/PUT /answers/1
   # PATCH/PUT /answers/1.json
   def update
-
+binding.pry
     Answer.group_update(current_user, answer_params)
     # respond_to do |format|
     #   if @answer.update(answer_params)
