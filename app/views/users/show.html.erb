@@ -24,12 +24,15 @@
   <%= @user.favorite_band %><br/><br/>
   <%= @user.favorite_venue %><br/><br/>
 
-
-  <%= link_to 'Edit', edit_user_path(@user) %> |
-  <!-- <%= link_to 'Questions', user_questions_path(@user) %> | -->
-  <% if current_user.is_band == true %>
-    <%= link_to 'Browse Musicians', users_path %>
+  <% if current_user.id == @user.id %>
+    <%= link_to 'Edit', edit_user_path(@user) %> |
+    <!-- <%= link_to 'Questions', user_questions_path(@user) %> | -->
+    <% if current_user.is_band == true %>
+      <%= link_to 'Browse Musicians', users_path %>
+    <% else %>
+      <%= link_to 'Browse Bands', users_path %>
+    <% end %>
   <% else %>
-    <%= link_to 'Browse Bands', users_path %>
+    <%= link_to 'Back to Browse', users_path %>
   <% end %>
 </section>
