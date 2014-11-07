@@ -7,6 +7,8 @@ class MessagesController < ApplicationController
 		end
 	end
 
+
+ # TODO - create notifactions table to go along with notifications for messanger service
 	def create
 		if logged_in?
 			match = Match.where('(first_user_id = ? AND second_user_id = ?) OR (first_user_id = ? AND second_user_id = ?)',session[:id],params[:receiver_id],params[:receiver_id],session[:id])[0]
