@@ -1,0 +1,13 @@
+html {
+  background: url("http://4.bp.blogspot.com/-umU1-el3xJM/UHVnCck2b4I/AAAAAAAAL0I/Ssur6EhbW7o/s0/music-record-vinyl-woodstock-1920x1080.jpg");
+}
+
+body {
+  opacity: .65;
+  margin: 2em 17em;
+  padding-bottom: 2em;
+  padding-top: 1em;
+  color: black !important;
+  border-radius: 1.5em;
+  border: 1.5px solid black;
+}
