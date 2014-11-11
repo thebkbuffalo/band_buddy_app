@@ -2,17 +2,11 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:300,400,900");
 @import url("users.css");
 @import url("sessions.css");
-
-/*
-	Twenty by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-/* Basic */
+@import url("reset.css");
+@import url("http://fonts.googleapis.com/css?family=Julius+Sans+One");
 
 	body, #skel-layers-wrapper {
-		background: #f3f6fa;
+		background: #f3f6fa !important;
 	}
 
 	body.is-loading * {
@@ -37,23 +31,81 @@
 		line-height: 1.75em;
 	}
 
-  #log_in {
-    text-align: center;
-    width: 15em;
-    margin: auto auto;
-  }
+
+
+	#log_in {
+		text-align: center;
+		margin: auto auto;
+		border: 2px solid black;
+		color: white;
+		background: url("http://4.bp.blogspot.com/-umU1-el3xJM/UHVnCck2b4I/AAAAAAAAL0I/Ssur6EhbW7o/s0/music-record-vinyl-woodstock-1920x1080.jpg") no-repeat center center fixed;
+		background-size: cover;
+		height: 26em;
+	}
+
+	#log_in h1 {
+		font-size: 3em;
+		color: #E6E8E3;
+		font-family: 'Julius Sans One', sans-serif;
+		padding-bottom: -.2em;
+		background: rgba(0,0,0,.3)
+	}
+
+	#email, #password {
+		color: white !important;
+		width: 50% !important;
+		background: rgba(255,255,255,.01);
+		margin: auto auto;
+		border: 1px solid white;
+	}
+
+	#quote {
+		text-align: center;
+		margin-top: .85em;
+	}
 
 	#sign_up_button {
 		text-decoration: none;
-		color: black !important;
+		color: white !important;
 		margin: auto auto;
+	}
+
+	#sign_up_button a {
+		color: white;
 	}
 
 	#log_in_button {
 		margin: auto auto;
 	}
 
+	#new_musician_form {
+		width: 40%;
+		margin: auto auto;
+	}
 
+	#user_form_header {
+		font-size: 1.75em;
+		text-align: center;
+	}
+
+
+	#user_name {
+		margin: auto auto;
+		position: center;
+	}
+
+	#questions_form {
+		margin-bottom: 2em;
+		border: 1px solid black;
+		font-size: 1em;
+		text-align: center;
+		margin: 0 15em;
+		background: rgba(252,249,247,.8);
+	}
+
+	#questions_header {
+		margin-bottom: -.2em;
+	}
 
 	a {
 		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
