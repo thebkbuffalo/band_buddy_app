@@ -1,28 +1,28 @@
 
 <section id="user_show">
-  <img id="user_pictures" src="<%= @user.picture %>" width=725px height=300px/><br/><br/>
-  Name: <%= @user.name %><br/><br/>
-  Email: <%= @user.email %><br/><br/>
+  <img id="user_pictures" src="<%= @user.picture %>" width=650px height=300px/><br/><br/>
+  Name: <%= @user.name %><br/>
+  Email: <%= @user.email %>
   <% if @user.is_band == true %>
     <p>We're a band!</p>
     <% else %>
     <p>I'm a musician!</p>
-  <% end %><br/>
-  Years Playing: <%= @user.years_playing %> Years <br/><br/>
-  Touring History: <%= @user.tour_history %><br/><br/>
+  <% end %>
+  Years Playing: <%= @user.years_playing %> Years <br/>
+  Touring History: <%= @user.tour_history %><br/>
   <% if @user.is_band == true %>
     We're at: <%= @user.location %>
   <% else %>
     I'm at: <%= @user.location %>
-  <% end %><br/><br/>
-  <%= @user.about_you %><br/><br/>
+  <% end %><br/>
+  <%= @user.about_you %><br/>
   <% if @user.is_smoker == true %>
     <p>Smokes? Yes Please!</p>
   <% else %>
     <p>Smokes? No Thanks!</p>
-  <% end %><br/>
-  <%= @user.favorite_band %><br/><br/>
-  <%= @user.favorite_venue %><br/><br/>
+  <% end %>
+  <%= @user.favorite_band %><br/>
+  <%= @user.favorite_venue %><br/>
 
   <% if current_user.id == @user.id %>
     <%= link_to 'Edit', edit_user_path(@user) %> |
