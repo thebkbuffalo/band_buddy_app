@@ -1,6 +1,6 @@
 
 <section id="user_show">
-  <img id="user_pictures" src="<%= @user.picture %>" width=650px height=300px/><br/><br/>
+  <img id="user_pictures" src="<%= @user.picture %>" width=650px height=300px/><br/>
   Name: <%= @user.name %><br/>
   Email: <%= @user.email %>
   <% if @user.is_band == true %>
@@ -25,14 +25,14 @@
   <%= @user.favorite_venue %><br/>
 
   <% if current_user.id == @user.id %>
-    <%= link_to 'Edit', edit_user_path(@user) %> |
+    <span class="button"><%= link_to 'Edit', edit_user_path(@user) %></span>
     <!-- <%= link_to 'Questions', user_questions_path(@user) %> | -->
-    <% if current_user.is_band == true %>
+    <span class="button"><% if current_user.is_band == true %>
       <%= link_to 'Browse Musicians', users_path %>
     <% else %>
       <%= link_to 'Browse Bands', users_path %>
     <% end %>
   <% else %>
     <%= link_to 'Back to Browse', users_path %>
-  <% end %>
+  <% end %></span>
 </section>
