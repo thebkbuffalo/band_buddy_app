@@ -1,11 +1,11 @@
 <%= render 'header' %>
 <section id="user_show">
   <% if current_user.id == @user.id %>
-    <img id="index_images" src="<%if user.picture != "" %><%= user.picture %><% else %>http://i0.kym-cdn.com/entries/icons/facebook/000/004/815/lol-guy.jpg<% end %>" width=650px height=300px /><br/>
+    <img id="index_images" src="<%if @user.picture != "" %><%= @user.picture %><% else %>http://i0.kym-cdn.com/entries/icons/facebook/000/004/815/lol-guy.jpg<% end %>" width=650px height=300px /><br/>
     <strong>Name</strong><br/><%= @user.name %><br/>
   <% else %>
     <h2><%= @user.name %></h2>
-    <img id="index_images" src="<%if user.picture != "" %><%= user.picture %><% else %>http://i0.kym-cdn.com/entries/icons/facebook/000/004/815/lol-guy.jpg<% end %>" width=650px height=300px /><br/>
+    <img id="index_images" src="<%if @user.picture != "" %><%= @user.picture %><% else %>http://i0.kym-cdn.com/entries/icons/facebook/000/004/815/lol-guy.jpg<% end %>" width=650px height=300px /><br/>
   <% end %>
   <% if current_user.id == @user.id %>
   <strong>Email</strong><br/><%= @user.email %>
