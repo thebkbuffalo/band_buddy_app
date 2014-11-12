@@ -1,4 +1,4 @@
-
+<%= render 'header' %>
 <section id="user_show">
   <% if current_user.id == @user.id %>
     <img id="user_pictures" src="<%= @user.picture %>" width=650px height=300px/><br/>
@@ -44,5 +44,5 @@
   <% else %>
     <span class="button"><%= link_to 'Back to Browse', users_path %></span>
   <% end %>
-  <br/>
+
 </section>

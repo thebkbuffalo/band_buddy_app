@@ -117,11 +117,12 @@
 		text-align: center;
 		margin: 0 10em;
 		padding-top: 1em;
+		padding-bottom: 1em;
 		border-radius: 5px;
 		background: rgba(252,249,247,.8);
 	}
 
-	#user_show a:hover {
+	a:hover {
 		color: #C02D75;
 	}
 
@@ -137,6 +138,21 @@
 		border-radius: 100%;
 		border: 1.5px solid black;
 	}
+
+  #user_header {
+		display: inline-block;
+		position: relative;
+		left: 15em;
+		margin-top: .5em;
+		padding: .3em;
+		text-align: center;
+	}
+
+	#user_header h1 {
+		display: inline-block;
+	}
+
+
 
 
 	/*end of custom work*/
@@ -742,7 +758,8 @@
 		position: fixed;
 		top: 0;
 		width: 100%;
-		z-index: 10000;
+		margin-bottom: 2em;
+
 	}
 
 		#header h1 {
@@ -764,7 +781,7 @@
 
 			#header nav ul li {
 				display: inline-block;
-				margin-left: 1.5em;
+				margin-left: -.5em;
 			}
 
 				#header nav ul li > ul {
