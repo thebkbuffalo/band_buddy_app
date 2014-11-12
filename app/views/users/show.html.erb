@@ -1,28 +1,37 @@
 
 <section id="user_show">
-  <img id="user_pictures" src="<%= @user.picture %>" width=650px height=300px/><br/>
-  Name: <%= @user.name %><br/>
-  Email: <%= @user.email %>
+  <% if current_user.id == @user.id %>
+    <img id="user_pictures" src="<%= @user.picture %>" width=650px height=300px/><br/>
+    <strong>Name</strong><br/><%= @user.name %><br/>
+  <% else %>
+    <h2><%= @user.name %></h2>
+    <img id="user_pictures" src="<%= @user.picture %>" width=650px height=300px/><br/>
+  <% end %>
+  <% if current_user.id == @user.id %>
+  <strong>Email</strong><br/><%= @user.email %>
+  <% else %>
+  <strong>Email</strong><br/><span class="button"><a href="mailto:<%= @user.email %>"><%= @user.email %></a></span>
+  <% end %>
   <% if @user.is_band == true %>
-    <p>We're a band!</p>
+    <p><strong>We're a band!</strong></p>
     <% else %>
-    <p>I'm a musician!</p>
+    <p><strong>I'm a musician!</strong></p>
   <% end %>
-  Years Playing: <%= @user.years_playing %> Years <br/>
-  Touring History: <%= @user.tour_history %><br/>
+  <strong>Years Playing</strong><br/><%= @user.years_playing %> Years <br/>
+  <strong>Touring History</strong><br/><%= @user.tour_history %><br/>
   <% if @user.is_band == true %>
-    We're at: <%= @user.location %>
+    <strong>We're At</strong><br/><%= @user.location %>
   <% else %>
-    I'm at: <%= @user.location %>
+    <strong>I'm At</strong><br/><%= @user.location %>
   <% end %><br/>
-  <%= @user.about_you %><br/>
+  <strong>About</strong><br/><%= @user.about_you %><br/>
   <% if @user.is_smoker == true %>
-    <p>Smokes? Yes Please!</p>
+    <p><strong>Smokes?</strong><br/>Yes Please!</p>
   <% else %>
-    <p>Smokes? No Thanks!</p>
+    <p><strong>Smokes? No Thanks!</strong><br/></p>
   <% end %>
-  <%= @user.favorite_band %><br/>
-  <%= @user.favorite_venue %><br/>
+  <strong>Favorite Band</strong><br/><%= @user.favorite_band %><br/>
+  <strong>Favorite Venue</strong><br/><%= @user.favorite_venue %><br/><br/>
 
   <% if current_user.id == @user.id %>
     <span class="button"><%= link_to 'Edit', edit_user_path(@user) %></span>
@@ -30,9 +39,10 @@
     <span class="button"><% if current_user.is_band == true %>
       <%= link_to 'Browse Musicians', users_path %>
     <% else %>
-      <%= link_to 'Browse Bands', users_path %>
+      <%= link_to 'Browse Bands', users_path %></span>
     <% end %>
   <% else %>
-    <%= link_to 'Back to Browse', users_path %>
-  <% end %></span>
+    <span class="button"><%= link_to 'Back to Browse', users_path %></span>
+  <% end %>
+  <br/>
 </section>

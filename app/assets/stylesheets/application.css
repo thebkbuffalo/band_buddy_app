@@ -31,7 +31,7 @@
 		line-height: 1.75em;
 	}
 
-
+	/*custom work*/
 
 	#log_in {
 		text-align: center;
@@ -120,6 +120,26 @@
 		border-radius: 5px;
 		background: rgba(252,249,247,.8);
 	}
+
+	#user_show a:hover {
+		color: #C02D75;
+	}
+
+	#users_index {
+		border: 1px solid black;
+		text-align: center;
+		margin: 0 22em;
+		padding: 1em 0;
+		background: #A5D6F0;
+	}
+
+	#index_images {
+		border-radius: 100%;
+		border: 1.5px solid black;
+	}
+
+
+	/*end of custom work*/
 
 	a {
 		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
