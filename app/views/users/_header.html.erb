@@ -1,0 +1,9 @@
+
+<header id="user_header">
+  <% if current_user %>
+    <h1><%= button_to "Logout", sessions_path, :method => :delete, class: :logout_button %></h1>
+      <span class="button"><%= link_to 'Browse', users_path %></span>
+      <a href="/users/<%=current_user.id%>">
+      <span id="welcome"><h1>Welcome <%= current_user.name %></h1></span></a>
+  <% end %>
+</header>

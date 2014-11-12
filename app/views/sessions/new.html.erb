@@ -1,17 +1,18 @@
+
+
 <section id="log_in">
- <img class="welcome_img" src="http://nathanspencerguitar.files.wordpress.com/2013/08/acoustic-guitar-1.jpg" style="z-index:-1; position:fixed; top:0; left: 0; overflow:hidden; width:100%; min-height: 950px; max-height:100%;"/>
 
   <div class="login_form" id="login">
-    <h1>Welcome to Band Buddy!</h1>
-    <h2>Sign In</h2>
-
-    <div class="login">
+    <h1><strong>Welcome To Band Buddy!</strong></h1>
+  <div class="login">
       <%= form_tag(sessions_path) do %>
-        <%= text_field_tag :email, nil, placeholder: 'Email' %><br/>
+        <span id="email_input"><%= text_field_tag :email, nil, placeholder: 'Email' %></span><br/>
         <%= password_field_tag :password, nil, placeholder: 'Password' %><br/>
-        <%= submit_tag('Login') %>
+      <span id="log_in_button"><%= submit_tag('Login') %></span><br/><br/>
+  		<span id="sign_up_button" class="button"><%= link_to('Sign up', new_user_path) %></span>
       <% end %>
       <p style="color: red"><%= flash[:error] %></p>
-  		<button><%= link_to('Sign up', new_user_path) %></button>
     </div>
 </section>
+
+<h4 id="quote"><%= @quotes.gsub('\n', '<br/>') %></h4>
