@@ -3,7 +3,8 @@
 <% @users.each do |user| %><br/>
 <div id="users_index">
   <a href="/users/<%=user.id%>">
-  <img id="index_images" src="<%= user.picture %>" width=250px height=212px/></a><br/>
+  <!-- <img id="index_images" src="<%= user.picture %>" width=250px height=212px/></a><br/> -->
+  <img id="index_images" src="<%if user.picture != "" %><%= user.picture %><% else %>http://i0.kym-cdn.com/entries/icons/facebook/000/004/815/lol-guy.jpg<% end %>" width=250px height=212px /></a><br/>
   <%= user.name %><br/>
     <% if user.is_band == true %>
       We're a band!
