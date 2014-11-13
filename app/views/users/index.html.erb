@@ -12,7 +12,7 @@
       I'm a musician!
 <% end %><br/>
 
-<%= user.get_scores(@session) %>% Matchiness<br/>
+<span id="percentage"><strong><%= user.get_scores(@session) %>% Matchiness</strong></span><br/>
 <% if user.is_band == true %>
   <span class="button"><%= link_to 'Check Us Out!', user %></span>
 <% else %>

@@ -134,6 +134,10 @@
 		background: #ACBEC2;
 	}
 
+	#percentage {
+		color: #FF2400;
+	}
+
 	#index_images {
 		border-radius: 100%;
 		border: 1.5px solid black;
