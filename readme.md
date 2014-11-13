@@ -11,7 +11,15 @@ The use of my app is SUPER simple.  Just clone it down, bundle install, spin it 
 - Active Record
 - HTML
 - CSS
-- More to come...
+- JS
+- jQuery
+
+
+### Features to come
+- messaging
+- SoundCloud API
+- BandCamp API
+- better searching options
 
 Version: 0.0.1
 
