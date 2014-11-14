@@ -20,6 +20,8 @@ The use of my app is SUPER simple.  Just clone it down, bundle install, spin it 
 - SoundCloud API
 - BandCamp API
 - better searching options
+- fuzzy search
+- add more interactive JS.
 
 Version: 0.0.1
 

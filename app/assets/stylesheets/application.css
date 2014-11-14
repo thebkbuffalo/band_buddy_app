@@ -131,7 +131,8 @@
 		text-align: center;
 		margin: 0 20em;
 		padding: 1em 0;
-		background: #ACBEC2;
+		color: white;
+		background: rgba(0,0,0,.60)
 	}
 
 	#percentage {
