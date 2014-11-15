@@ -12,9 +12,9 @@
       I'm a musician!
 <% end %><br/>
 <% if user.is_band == true %>
-  We're looking for a <%= user.instrument %>
+  Looking For: <%= user.instrument %>
 <% else %>
-  I play the <%= user.instrument %>
+  Play(s): <%= user.instrument %>
 <% end %><br/>
 <span id="percentage"><strong><%= user.get_scores(@session) %>% Matchiness</strong></span><br/>
 <% if user.is_band == true %>
